@@ -11,7 +11,7 @@ services:
       - mongo_data:/data/db
 
   backend:
-    build: ./backend
+    image: arun4568/backend:latest
     container_name: backend
     restart: always
     environment:
@@ -20,7 +20,7 @@ services:
       - mongo
 
   frontend:
-    build: ./frontend
+    image: arun4568/frontend:latest
     container_name: frontend
     restart: always
     depends_on:
